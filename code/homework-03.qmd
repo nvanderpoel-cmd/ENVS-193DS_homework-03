@@ -114,7 +114,75 @@ After running the Spearman's rank test as well, I have concluded that the result
 
 ## a. Updating your visualizations
 
+### Figure 1: Categorical Variable
+
+```{r}
+#| label: figure 1: categorical variable
+
+#cleaning my data
+#creating new object my_data_clean
+my_data_clean <- clean_names(my_data) |> 
+  #making readable
+  mutate(work_out = case_when(
+    work_out == "N" ~ "No",
+    work_out == "Y" ~ "Yes"
+  ))
+
+#base layer: ggplot
+ggplot(data = my_data_clean,
+       #x- axis: did I work out the day before? 
+       #y- axis: ounces of coffee consumed per day
+       mapping = aes(x = work_out,
+                     y = coffee_oz,
+                     #grouping colors by work out
+                     color = work_out)) +
+  #adding points
+  geom_point(size = 2) +
+  #labelling axes
+  labs(x = "Work Out the Day Before?",
+       y = "Coffee Per Day (oz)",
+       title = "Influence of working out the day before on coffee consumed") +
+  #choosing different colors, yes = green, no = red
+  scale_color_manual(values = c("Yes" = "forestgreen",
+                                "No" = "tomato")) +
+  #changing theme from default and to make colors more visible
+  theme_classic() +
+  #getting rid of legend
+  theme(legend.position = "none")
+
+```
+
+### Figure 2: Continuous variable
+
+```{r}
+#| label: continuous variable
+
+#base layer: ggplot
+ggplot(data = my_data_clean,
+       #x- axis: Amount of sleep (hours) 
+       #y- axis: ounces of coffee consumed per day
+       mapping = aes(x = amount_of_sleep,
+                     y = coffee_oz,
+                     )) +
+  #adding points
+  geom_point(size = 2,
+             color = "pink") +
+  #labelling axes
+  labs(x = "Amount of Sleep (hours)",
+       y = "Coffee Per Day (oz)",
+       title = "Influence of amount of sleep on amount of coffee consumed") +
+  #changing theme from default 
+  theme_classic() +
+  #getting rid of legend
+  theme(legend.position = "none")
+
+
+```
+
+
 ## b. Captions
+
+
 
 # Problem 3. Affective visualization
 
