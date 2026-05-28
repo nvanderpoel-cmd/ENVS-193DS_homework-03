@@ -76,9 +76,23 @@ plot(kelp_lm)
 
 For assumptions I wanted to check the homoscedasticity, normal distribution, and outliers of the model using a linear regression model. The outputs demonstrate random distribuions for Residuals vs Fitted and Scale-Location indicating homoscedasticity; points that, in general, match the qq line in the QQ plot, indicating normal distribution; and not really any outliers in the Residuals vs Leverage plot as the points lay inside of the dotted lines. 
 
-### Running test
+### Running Correlation test
+
+```{r}
+#| label: running correlation test
+
+# running pearsons coefficient
+# data$predictor, data$response
+cor.test(kelp$temp_c, kelp$kelp_elong,
+         method = "pearson")
+
+
+```
+
 
 ## d. Results communication
+
+
 
 ## e. Test implications
 
