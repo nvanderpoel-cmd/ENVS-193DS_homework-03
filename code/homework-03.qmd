@@ -15,8 +15,8 @@ library(here)
 library(janitor)
 library(readxl)
 
-kelp <- read_csv("data/temp-kelp.csv")
-my_data <- read_xlsx("data/Project 193DS.xlsx")
+kelp <- read_csv(here("data", "temp-kelp.csv"))
+my_data <- read_xlsx(here("data", "Project 193DS.xlsx"))
 ```
 
 # Problems
@@ -70,6 +70,7 @@ kelp_lm <- lm( kelp_elong ~ temp_c,
 #displaying linear model
 # putting side by side
 par(mfrow = c(2,2)) 
+# plotting linear model
 plot(kelp_lm)
 
 ```
@@ -117,10 +118,10 @@ After running the Spearman's rank test as well, I have concluded that the result
 ### Figure 1: Categorical Variable
 
 ```{r}
-#| label: figure 1: categorical variable
+#| label: figure 1 categorical variable
 
-#cleaning my data
-#creating new object my_data_clean
+# cleaning my data
+# creating new object my_data_clean
 my_data_clean <- clean_names(my_data) |> 
   #making readable
   mutate(work_out = case_when(
@@ -155,14 +156,14 @@ ggplot(data = my_data_clean,
 ### Figure 2: Continuous variable
 
 ```{r}
-#| label: continuous variable
+#| label: figure 2 continuous variable
 
 #base layer: ggplot
 ggplot(data = my_data_clean,
        #x- axis: Amount of sleep (hours) 
        #y- axis: ounces of coffee consumed per day
        mapping = aes(x = amount_of_sleep,
-                     y = coffee_oz,
+                     y = coffee_oz
                      )) +
   #adding points
   geom_point(size = 2,
@@ -182,13 +183,16 @@ ggplot(data = my_data_clean,
 
 ## b. Captions
 
+**Figure 1: Working out the day before has little impact on coffee consumed per day (oz).** Points represent observations of how much coffee, in ounces, was consumed depending on if I worked out the day before or not (total n = 37). Colors represent if I worked out the day before or not (green: Yes, red: No) 
+
+**Figure 2: Coffee per day (oz) decreases as sleep (hrs) increases.** Points represent observations of how much coffee, in ounces, was consumed compared to how many hours I had slept (n = 37). 
 
 
 # Problem 3. Affective visualization
 
 ## a. Describe in words what an affective visualization could look like for your personal data
 
-## b. Create a skietch (on paper) of your idea
+## b. Create a sketch (on paper) of your idea
 
 ## c. Make a draft of your visualization
 
