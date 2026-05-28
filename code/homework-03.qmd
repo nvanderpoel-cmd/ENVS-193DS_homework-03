@@ -29,6 +29,31 @@ An appropriate test to determine the strength of the relationship between temper
 
 ## b. Create a visualization
 
+```{r}
+#| label: creating a visualization
+
+# base layer ggplot
+ggplot(data = kelp,
+       # x axis = temperature
+       # y axis = kelp_elong
+       mapping = aes( x = temp_c,
+                      y = kelp_elong)
+       ) +
+  # adding geometry - points, scatterplot
+  geom_point(size = 2,
+             # changing color from default
+             color = "skyblue") +
+  # changing theme from default
+  theme_classic() +
+  # adding axes labels
+  labs( x = "Temperature (Celsius)",
+        y = "Giant Kelp Frond Elongation rate (cm/day)")
+
+
+
+```
+
+
 ## c. Check your assumptions and run your test
 
 ## d. Results communication
