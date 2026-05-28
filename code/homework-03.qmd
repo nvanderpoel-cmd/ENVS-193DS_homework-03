@@ -56,6 +56,28 @@ ggplot(data = kelp,
 
 ## c. Check your assumptions and run your test
 
+### Checking Assumptions
+
+```{r}
+#| label: checking assumptions
+
+# creating new object
+# linear regression model of kelp
+# (response ~ predictor)
+kelp_lm <- lm( kelp_elong ~ temp_c,
+    data = kelp
+    )
+#displaying linear model
+# putting side by side
+par(mfrow = c(2,2)) 
+plot(kelp_lm)
+
+```
+
+For assumptions I wanted to check the homoscedasticity, normal distribution, and outliers of the model using a linear regression model. The outputs demonstrate random distribuions for Residuals vs Fitted and Scale-Location indicating homoscedasticity; points that, in general, match the qq line in the QQ plot, indicating normal distribution; and not really any outliers in the Residuals vs Leverage plot as the points lay inside of the dotted lines. 
+
+### Running test
+
 ## d. Results communication
 
 ## e. Test implications
