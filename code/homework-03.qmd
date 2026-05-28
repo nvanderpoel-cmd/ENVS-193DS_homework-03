@@ -4,8 +4,66 @@ author: "Niki van der Poel"
 format: pdf
 ---
 
+# Set up
 
+```{r}
+#| message: FALSE
+#| label: Set up
 
+library(tidyverse)
+library(here)
+library(janitor)
+library(readxl)
+
+kelp <- read_csv("data/temp-kelp.csv")
+my_data <- read_xlsx("data/Project 193DS.xlsx")
+```
+
+# Problems
+
+# Problem 1. Giant kelp fronds
+
+## a. An appropriate test
+
+An appropriate test to determine the strength of the relationship between temperature and giant kelp frond elongation rate would be to measure the correlation. You can measure stregth of correlation through the following tests: Pearson's product-moment correlation, Spearman's rank correlation.
+
+## b. Create a visualization
+
+## c. Check your assumptions and run your test
+
+## d. Results communication
+
+## e. Test implications
+
+## f. Double check your own work
+
+# Problem 2. Personal data
+
+## a. Updating your visualizations
+
+## b. Captions
+
+# Problem 3. Affective visualization
+
+## a. Describe in words what an affective visualization could look like for your personal data
+
+## b. Create a skietch (on paper) of your idea
+
+## c. Make a draft of your visualization
+
+## d. Write an artist statement
+
+## e. Prep your materials to share in class
+
+# Problem 4. Statistical critique
+
+## a. Revisit and summarize
+
+## b. Visual clarity
+
+## c. Aesthetic clarity
+
+## d. Recommendations
 
 
 
