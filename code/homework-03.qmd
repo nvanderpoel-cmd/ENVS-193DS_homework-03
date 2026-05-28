@@ -100,6 +100,16 @@ We found a moderate negative (Pearson's r = -0.69) relationship between temperat
 
 ## f. Double check your own work
 
+```{r}
+#| label: double-checking
+ 
+# double checking using Spearmans
+cor.test(kelp$temp_c, kelp$kelp_elong,
+         method = "spearman")
+```
+
+After running the Spearman's rank test as well, I have concluded that the results lead me to the same conclusion of rejecting the null hypothesis for a moderate negative relationship between temperature and kelp frond elongation rate. Both tests have similar correlation values -0.68, along with p-values under 0.001.
+
 # Problem 2. Personal data
 
 ## a. Updating your visualizations
