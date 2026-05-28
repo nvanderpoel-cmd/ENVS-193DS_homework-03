@@ -192,7 +192,11 @@ ggplot(data = my_data_clean,
 
 ## a. Describe in words what an affective visualization could look like for your personal data
 
+Because I like drinking coffee, I thought it would be nice to recreate my favorite way to drink coffee. Which is at a cafe or at home, cozy inside, with a great view of nature, mountains or otherwise, while I do my work. I was inspired from the watercolor mountain data, and I think it would be visually appealing to show my data as a mountain slope in the background of this coffee scene. 
+
 ## b. Create a sketch (on paper) of your idea
+
+
 
 ## c. Make a draft of your visualization
 
