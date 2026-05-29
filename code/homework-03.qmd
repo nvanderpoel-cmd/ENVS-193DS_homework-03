@@ -227,11 +227,11 @@ I inserted a table for part a, and it displays the results fairly clearly for an
 
 ## c. Aesthetic clarity
 
-There was not a lot of "visual clutter". Titles were in bold and easy to read, however, nothing else was italicized or in bold.
+There was not a lot of "visual clutter". Titles were in bold and easy to read, however, nothing else was italicized or in bold. Overall, it was straightforward, simple, and easy to read.
 
 ## d. Recommendations
 
-
+It was a little difficult to understand so if I had to make recommendations I would say to change the titles to be more descriptive. Although the brevity means less ink, I think the titles are a little too concise so they get a little confusing. Additionally the titles "between clusters" and "between neighborhoods" are a little misleading because it seems like you are measuring the difference between clusters or between neighborhoods instead of between a cluster and a respondents home or between a neighborhood and a respondents' home.
 
 
 
