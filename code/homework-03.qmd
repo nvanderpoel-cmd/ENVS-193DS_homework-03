@@ -217,11 +217,17 @@ My visualization shows the data of coffee consumed per day compared to hours of 
 
 ## a. Revisit and summarize
 
+The paper uses a Welch's ANOVA test with values and preferences distances as the response variable and effect of gender, age, and income as the predictor variable.
 
+![]("ANOVA_table copy.png")
 
 ## b. Visual clarity
 
+I inserted a table for part a, and it displays the results fairly clearly for an ANOVA test, you are able to see which values belong where. However, I was a little unclear to what the values actually meant and it took a lot of back and forth with reading the text to see what exactly they were talking about.
+
 ## c. Aesthetic clarity
+
+
 
 ## d. Recommendations
 
