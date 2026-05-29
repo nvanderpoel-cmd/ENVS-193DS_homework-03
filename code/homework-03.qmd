@@ -144,7 +144,7 @@ ggplot(data = my_data_clean,
   #labelling axes
   labs(x = "Work Out the Day Before?",
        y = "Coffee Per Day (oz)",
-       title = "Influence of working out the day before on coffee consumed") +
+       title = "Working out the day before influences amount of coffee consumed") +
   #choosing different colors, yes = green, no = red
   scale_color_manual(values = c("Yes" = "forestgreen",
                                 "No" = "tomato")) +
@@ -173,7 +173,7 @@ ggplot(data = my_data_clean,
   #labelling axes
   labs(x = "Amount of Sleep (hours)",
        y = "Coffee Per Day (oz)",
-       title = "Influence of amount of sleep on amount of coffee consumed") +
+       title = "Coffee consumed per day decreases as amount of sleep per day increases") +
   #changing theme from default 
   theme_classic() +
   #getting rid of legend
@@ -216,6 +216,8 @@ My visualization shows the data of coffee consumed per day compared to hours of 
 # Problem 4. Statistical critique
 
 ## a. Revisit and summarize
+
+
 
 ## b. Visual clarity
 
