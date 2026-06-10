@@ -142,7 +142,9 @@ ggplot(data = my_data_clean,
   #labelling axes
   labs(x = "Work Out the Day Before?",
        y = "Coffee Per Day (oz)",
-       title = "Working out the day before influences amount of coffee consumed") +
+       title = str_wrap("Working out the day before influences amount of coffee consumed",
+                        width = 40),
+       subtitle = "5/27/26") +
   #choosing different colors, yes = green, no = red
   scale_color_manual(values = c("Yes" = "forestgreen",
                                 "No" = "tomato")) +
@@ -171,7 +173,9 @@ ggplot(data = my_data_clean,
   #labelling axes
   labs(x = "Amount of Sleep (hours)",
        y = "Coffee Per Day (oz)",
-       title = "Coffee consumed per day decreases as amount of sleep per day increases") +
+       title = str_wrap("Coffee consumed per day decreases as amount of sleep per day increases",
+                        width = 40),
+       subtitle = "5/27/26") +
   #changing theme from default 
   theme_classic() +
   #getting rid of legend
