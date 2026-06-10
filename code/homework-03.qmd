@@ -1,7 +1,12 @@
 ---
-title: "ENVS-193DS_homework-03"
+title: "ENVS 193DS homework 03"
 author: "Niki van der Poel"
-format: pdf
+format:
+  pdf:
+    toc: true # use this to display a table of contents
+execute:
+  message: false # use this to make sure messages don't show up
+  warning: false # use this to make sure warnings don't show up
 ---
 
 # Set up
@@ -60,8 +65,6 @@ ggplot(data = kelp,
 
 ```{r}
 #| label: checking assumptions
-#| fig-height: 6
-#| fig-width: 8
 
 # QQ plot to check assumptions
 #base layer: urchins_clean
