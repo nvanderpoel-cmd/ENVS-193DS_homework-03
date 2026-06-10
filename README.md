@@ -13,7 +13,7 @@ Code includes qmd and rendered pdf of homework 3 which include visualizations of
 
 ## Rendered output
 
-[link to rendered output](https://github.com/nvanderpoel-cmd/ENVS-193DS_homework-03/raw/main/code/vanderpoel_homework-03.pdf)
+[link to rendered output](https://github.com/nvanderpoel-cmd/ENVS-193DS_homework-03/raw/main/code/homework-03.pdf)
 
 
 
