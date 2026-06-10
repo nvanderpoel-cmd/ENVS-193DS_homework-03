@@ -7,7 +7,7 @@ This repo is for ENVS 193DS Spring 2026 homework 03 by Niki van der Poel
 
 ## Data and file information
 
-Data include temperature-kelp data (csv). 
+Data include temperature-kelp data (csv) and personal data collected on coffee consumption and amount of sleep (xlsx). 
 
 Code includes qmd and rendered pdf of homework 3 which include visualizations of giant kelp fronds, and personal data (affective and not-affective), along with statistical critique.
 
