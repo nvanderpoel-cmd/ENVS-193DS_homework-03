@@ -16,7 +16,7 @@ library(janitor)
 library(readxl)
 
 kelp <- read_csv(here("data", "temp-kelp.csv"))
-my_data <- read_xlsx(here("data", "Project 193DS.xlsx"))
+my_data <- read_xlsx(here("data", "my_data.xlsx"))
 ```
 
 # Problems
@@ -25,7 +25,7 @@ my_data <- read_xlsx(here("data", "Project 193DS.xlsx"))
 
 ## a. An appropriate test
 
-An appropriate test to determine the strength of the relationship between temperature and giant kelp frond elongation rate would be to measure the correlation. You can measure stregth of correlation through the following tests: Pearson's product-moment correlation, Spearman's rank correlation.
+An appropriate test to determine the strength of the relationship between temperature and giant kelp frond elongation rate would be to measure the correlation. You can measure stregth of correlation through the following tests: Pearson's product-moment correlation, Spearman's rank correlation. Pearson's correlation is parametric and describes linear relationships between variables where variables are continuous and normally distributed, and observations are independent. Meanwhile, Spearman's is non-parametric and describes a monotonic relationship between variables and independent observations.
 
 ## b. Create a visualization
 
@@ -63,21 +63,19 @@ ggplot(data = kelp,
 #| fig-height: 6
 #| fig-width: 8
 
-# creating new object
-# linear regression model of kelp
-# (response ~ predictor)
-kelp_lm <- lm( kelp_elong ~ temp_c,
-    data = kelp
-    )
-#displaying linear model
-# putting side by side
-par(mfrow = c(2,2)) 
-# plotting linear model
-plot(kelp_lm)
+# QQ plot to check assumptions
+#base layer: urchins_clean
+ggplot(data = kelp,
+       #y axis: temp_c
+       mapping = aes(sample = temp_c)) +
+  #first layer: reference for qq plot
+  geom_qq_line(color = "seagreen") +
+  #second layer: points representing sample quantiles
+  geom_qq() 
 
 ```
 
-For assumptions I wanted to check the homoscedasticity, normal distribution, and outliers of the model using a linear regression model. The outputs demonstrate random distribuions for Residuals vs Fitted and Scale-Location indicating homoscedasticity; points that, in general, match the qq line in the QQ plot, indicating normal distribution; and not really any outliers in the Residuals vs Leverage plot as the points lay inside of the dotted lines. 
+For assumptions I wanted to check the assumptions: variables are continuous and normally distributed, and observations are independent using a QQ plot. QQ plots demonstrate normal distribution. The results of which indicated a normal distribution as points lined up with the QQ line. 
 
 ### Running Correlation test
 
@@ -99,7 +97,7 @@ I used a Pearson's Correlation test in order to determine the strength of the re
 
 ## e. Test implications
 
-We found a moderate negative (Pearson's r = -0.69) relationship between temperature and giant kelp frond elongation rate. Here, as temperature increases, giant kelp frond elongation rate decreases. 
+We found a moderate negative (Pearson's r = -0.69) relationship between temperature and giant kelp frond elongation rate. Here, as temperature increases, giant kelp frond elongation rate decreases. Therefore, giant kelp frond health increases at lower temperatures and lower temperatures are important for kelp health.
 
 ## f. Double check your own work
 
@@ -111,7 +109,7 @@ cor.test(kelp$temp_c, kelp$kelp_elong,
          method = "spearman")
 ```
 
-After running the Spearman's rank test as well, I have concluded that the results lead me to the same conclusion of rejecting the null hypothesis for a moderate negative relationship between temperature and kelp frond elongation rate. Both tests have similar correlation values -0.68, along with p-values under 0.001.
+After running the Spearman's rank test as well, I have concluded that the results lead me to the same conclusion of rejecting the null hypothesis for a moderate negative relationship between temperature and kelp frond elongation rate. Both tests have similar correlation values -0.68, along with p-values under 0.001 (Spearman $\rho$ = -0.69, S = 9216.1, p < 0.001, $\alpha$ = 0.05).
 
 # Problem 2. Personal data
 
